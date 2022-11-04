@@ -13,8 +13,9 @@ jobs:
           working_directory: "./src/lettera_candidatura/"
           work_in_root_file_dir: true
           post_compile: "latexmk -c"
-          
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+        
+      # upload pdf compilato 
+      - uses: actions/upload-artifact@v3
         with:
-          path: "./src/lettera_candidatura/"
+          name: lettera_candidatura
+          path: "./src/lettera_candidatura/*.pdf"
