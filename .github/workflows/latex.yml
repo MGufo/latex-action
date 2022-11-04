@@ -10,12 +10,12 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: lettera_candidatura.tex
-          working_directory: lettera_candidatura
+          working_directory: "./src/lettera_candidatura/"
           work_in_root_file_dir: true
           post_compile: "latexmk -c"
           
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: lettera_candidatura
+	  name: lettera_candidatura
           path: /out/
