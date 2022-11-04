@@ -17,5 +17,5 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: PDF
-          path: .pdf
+          name: lettera_candidatura
+          path: /out/
