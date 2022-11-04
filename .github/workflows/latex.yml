@@ -17,4 +17,4 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          path: /out/
+          path: "./src/lettera_candidatura/"
