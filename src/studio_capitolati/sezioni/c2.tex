@@ -1,0 +1,59 @@
+\section{Capitolato C2 - Lumus Minima}\label{section:c2}
+
+\subsection{Informazioni generali}
+\begin{itemize}
+    \item \textbf{Nome:} \textit{Lumos Minima}
+    \item \textbf{Proponente:} \textit{Imola Informatica}
+    \item \textbf{Committente:} \commitNameM{} e \commitNameS{}
+\end{itemize}
+
+\subsection{Descrizione del capitolato}
+L’obiettivo di questo capitolato è quello di creare un sistema per l’ottimizzazione dell’illuminazione pubblica, modulando tramite sensori di presenza l’intensità della luce emessa dalle fonti luminose.\newline
+Il sistema deve avere queste caratteristiche:
+\begin{itemize}
+    \item Applicazione web responsive utilizzabile da smartphone (android o iOS).
+    \item Rilevamento della presenza di persone in prossimità della fonte luminosa.
+    \item Aumento/riduzione automatica dell’intensità luminosa.
+    \item Rilevamento automatico di guasti ad un impianto di illuminazione.
+    \item Segnalazione manuale di un guasto ad un impianto di illuminazione.
+    \item Aumento/riduzione manuale dell’intensità luminosa di un impianto di illuminazione.
+    \item Inserimento, gestione e rimozione di un impianto luminoso.
+    \item Aumento o riduzione globale dell’intensità luminosa.
+\end{itemize}
+
+\subsection{Finalità del progetto}
+L’azienda propone il seguente flusso di operazioni per l’attività dell’applicazione:
+\begin{itemize}
+    \item \textit{Login} e \textit{logout} di un operatore tramite credenziali personali.
+    \item Collegamento di un impianto luminoso ai dati derivanti da un sensore.
+    \item Gestione manuale di un impianto luminoso.
+    \item Aumento o riduzione globale dell’intensità luminosa da parte di un operatore o tramite dati di un sensore.
+    \item Aumento o riduzione locale (per area illuminata) dell’intensità luminosa da parte di un operatore o tramite dati di un sensore.
+    \item Consultazione dell’elenco degli impianti guasti.
+    \item Inserimento e gestione di un impianto luminoso.
+    \item Creazione, modifica e rimozione di nuove aree illuminate.
+    \item Tracciamento delle intensità luminose di ogni impianto.
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+La proponente consiglia l'uso del \textit{framework React} per il \textit{frontend} e il linguaggio
+\textit{Python} per il \textit{backend}.
+Viene suggerita inoltre un'architettura di tipo \textit{client-server}.
+È tuttavia consentito l'utilizzo di linguaggi/\textit{framework} alternativi, previa motivazione.
+Viene richiesto inoltre lo sviluppo di una \textit{API REST} per gestire la comunicazione tra
+\textit{frontend} e \textit{backend}.
+Vengono consigliati i protocolli \textit{MQTT} e \textit{AMQP} per la comunicazione con i dispositivi \textit{IoT}.
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+    \item Progetto interessante e attuale.
+    \item Se realmente applicato potrebbe essere utile per combattere la crisi energetica in corso.
+    \item La proponente fornirà un server per l'\textit{hosting} del progetto e un kit composto da \textit{smart light} e sensore.
+\end{itemize}
+
+\subsection{Criticità e fattori rischio}
+L’azienda a primo impatto non è sembrata molto disponibile.
+
+\subsection{Conclusione}
+Il progetto, nonostante fosse di interesse comune, non è stato scelto in quanto si è deciso di dedicarsi ad un capitolato più stimolante e che raccogliesse maggiore interesse da parte dei membri.
+

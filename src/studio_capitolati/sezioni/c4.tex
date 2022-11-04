@@ -1,0 +1,52 @@
+\section{Capitolato C4 - Piattaforma di localizzazione testi}\label{section:c4}
+
+\subsection{Informazioni generali}
+\begin{itemize}
+    \item \textbf{Nome:} \textit{Piattaforma di localizzazione testi}
+    \item \textbf{Proponente:} \textit{Zero 12}
+    \item \textbf{Committente:} \commitNameM{} e \commitNameS{}
+\end{itemize}
+
+\subsection{Descrizione del capitolato}
+Con la diffusione del web in differenti paesi del mondo è sorto il problema di rendere disponibile un
+certo contenuto ad un pubblico sempre più vasto e variegato.
+Risulta necessario in tal senso andare ad abbattere le barriere linguistiche per rendere l’applicazione
+di nostro interesse il più possibile competitiva in un mercato internazionale enorme come il nostro, ed andare quindi ad attingere ad un bacino di utenza, e quindi di possibili clienti, sensibilmente maggiore.\newline
+Nasce così l’idea di questa piattaforma che si pone proprio l'obiettivo di rendere disponibili traduzioni di determinati contenuti in diverse lingue, proprio con lo scopo di permettere a colui che ne voglia sfruttare le funzionalità di ritagliarsi una ferma il più grande possibile di mercato.
+
+\subsection{Finalità del progetto}
+Lo scopo di qusto progetto è creare una piattaforma che permetta di gestire i testi delle localizzazioni di \textit{mobile app} e \textit{webapp}.
+La piattaforma deve supportare il \textit{multi-tenant}, ovvero la capacità di fornire servizi per diverse organizzazioni mantenendo i corrispettivi dati isolati a livello logico tra di loro.\newline
+Si richiede di considerare 2 tipologie di utenti:
+\begin{itemize}
+    \item \textit{admin user}: Gestore delle organizzazioni abilitate ad accedere alla piattaforma, rappresenta La Proponente.
+    \item \textit{content user}: Utenti che si occuperanno di creare contenuti e traduzioni.
+\end{itemize}
+
+È infine richiesto che le traduzioni prevedano processi di approvazione, un concetto di versionamento, una gestione tramite chiave univoca e la possibilità di suddividerle in gruppi.
+
+\subsection{Tecnologie interessate}
+Per la realizzazione di questo progetto viene richiesto l’utilizzo di tecnologie di \textit{Amazon Web Services}, in particolar modo i servizi:
+\begin{itemize}
+    \item \textit{AWS fargate}: permette la gestione a \textit{container} senza l’utilizzo di server.
+    \item \textit{AWS Aurora Serverless}: servizio serverless per la gestione di database \textit{SQL}.
+\end{itemize}
+Per quanto riguarda i linguaggi di programmazione si richiede l’uso di:
+\begin{itemize}
+    \item \textit{NodeJS} per sviluppare l’API Restful JSON di supporto.
+    \item \textit{Typescript} per lo sviluppo di una libreria frontend.
+    \item \textit{Swift} per lo sviluppo di una libreria iOS/MacOS.
+    \item \textit{Kotlin} per lo sviluppo di una libreria Android.
+\end{itemize}
+\subsection{Aspetti positivi}
+\begin{itemize}
+    \item Il progetto offre l'opportunità di conoscere le tecnologie \textit{Amazon Web Services}, offrendo anche \$500 di crediti spendibili sulla piattaforma.
+    \item L’azienda si è dimostrata molto disponibile, fornendo un corso di formazione per lo sviluppo \textit{cloud native} e di \textit{API Restful JSON}.
+\end{itemize}
+
+\subsection{Criticità e fattori rischio}
+Il gruppo non ha manifestato particolare interesse nell’idea alla base di questo progetto, preferendo ad esso altri capitolati ritenuti più stimolanti.
+
+\subsection{Conclusione}
+Nonostante il progetto sia più che valido il gruppo ha preferito inserire in cima alla lista delle preferenze altri capitolati a seguito di un maggiore interesse riscontrato dai suoi componenti.
+

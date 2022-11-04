@@ -1,0 +1,25 @@
+\fancypagestyle{styleDocPages}{
+    \thispagestyle{empty}
+    \thispagestyle{fancy}
+    \pagestyle{fancy}
+
+    % HEADER
+    \setlength{\topmargin}{-50pt}
+    \setlength{\headsep}{60pt}
+	\fancyhf{}
+	\lhead{}
+	\setlength{\headheight}{10pt}
+	\rhead{\includegraphics[width=1cm]{../template/images/logo-pentasoft}}
+
+    % FOOTER
+    \fancyfoot{}
+    \fancyfoot[L]{\documentName}
+    \fancyfoot[R]{Pagina \thepage~di~\pageref{LastPage}}
+    \futurelet\TMPfootrule\def\footrule{\TMPfootrule}
+    \setcounter{page}{0}
+    \pagenumbering{arabic}
+    \renewcommand{\footrulewidth}{0.3pt}
+}
+
+\setcounter{tocdepth}{5}    % aggiunge i paragrafi e i sottoparagrafi all'indice
+\setcounter{secnumdepth}{5} % aagiunge il numero di indicizzazione a paragrafi e sottoparagrafi

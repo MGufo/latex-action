@@ -1,0 +1,51 @@
+\section{Capitolato C3 - Personal Identity Wallet}\label{section:c3}
+
+\subsection{Informazioni generali}
+    \begin{itemize}
+        \item \textbf{Nome:} \textit{Personal Identity Wallet}
+        \item \textbf{Proponente:} \textit{InfoCert S.p.A}
+        \item \textbf{Committente:} \commitNameM{} e \commitNameS{}
+    \end{itemize}
+
+\subsection{Descrizione del capitolato}
+L’identità digitale è un cardine della vita di tutti i giorni: basti pensare a quanti siti web, applicazioni e servizi online consentano il login tramite account Google, Facebook, ecc; questi account tuttavia non possiedono valore giuridico tale da poter essere usati in contesti formali quali portali assicurativi, bancari, sanitari, ecc. A soluzione del problema ogni Stato ha introdotto un proprio servizio di identità digitale nazionale (es: SPID e CIE), non sempre compatibile con servizi analoghi usati da Stati esteri.\newline
+Al fine di garantire interoperabilità tra credenziali nazionali e servizi digitali di Stati esteri l’UE ha recentemente proposto la creazione di una nuova "Identità Digitale", che garantisca l’autenticazione presso qualsiasi servizio digitale fornito all’interno dell’UE.
+
+\subsection{Finalità del progetto}
+Scopo del progetto è la realizzazione di un prototipo di sistema per la creazione, verifica e utilizzo di "credenziali verificabili".\newline
+Il sistema deve quindi fornire agli utenti le seguenti caratteristiche:
+    \begin{itemize}
+        \item \textit{Generazione delle credenziali:}
+            \begin{itemize}
+                \item L’utente deve poter richiedere una credenziale ad un “ente certificatore” tramite apposita pagina sul sito web di quest’ultimo.
+                \item L’impiegato  dell’ente certificatore deve poter autorizzare il rilascio della credenziale all’utente che ne ha fatto richiesta.
+                \item L’utente deve poter ricevere la credenziale richiesta dal sito web dell’ente certificatore.
+            \end{itemize}
+        \item \textit{Gestione delle credenziali:}
+            \begin{itemize}
+                \item L’utente deve poter visualizzare, tramite apposita webapp,  le credenziali ricevute dai vari enti certificatori.
+                \item L’utente deve poter eliminare, tramite apposita webapp, le credenziali ricevute dai vari enti certificatori.
+            \end{itemize}
+        \item \textit{Verifica delle credenziali:}
+            \begin{itemize}
+                \item L’utente deve poter esibire una credenziale contenuta nel suo wallet ad un verificatore che ne faccia richiesta.
+                \item Un verificatore deve poter richiedere l’esibizione di una credenziale ad un utente che stia navigando sul sito web del verificatore.
+                \item Un verificatore deve poter certificare la correttezza della credenziale esibita dall'utente.
+            \end{itemize}
+    \end{itemize}
+
+\subsection{Tecnologie interessate}
+La proponente non ha delineato uno stack tecnologico nella presentazione del capitolato, lasciando l’onere della scelta motivata al fornitore.
+
+\subsection{Aspetti positivi}
+    \begin{itemize}
+        \item Il progetto verte su temi attuali e di pubblico interesse.
+        \item Il prototipo realizzato potrebbe essere esteso o usato come PoC da cui partire per realizzare quanto richiesto dall'UE, aggiungendo valore al C.V. dei membri del gruppo fornitore.
+    \end{itemize}
+
+\subsection{Criticità e fattori rischio}
+Alla data di scrittura di questa analisi la specifica tecnica riguardante il formato delle credenziali e i protocolli di comunicazione non è stata resa disponibile dalla UE. Ciò potrebbe causare difficoltà e/o ritardi aggiuntivi nel tracciamento dei requisiti e nella realizzazione del progetto.
+
+\subsection{Conclusione}
+Pur apprezzandone la nobile finalità il team di sviluppo ha dimostrato scarso interesse nella realizzazione del capitolato, preferendogli proposte più stimolanti dal punto di vista tecnologico.
+

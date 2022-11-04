@@ -1,0 +1,32 @@
+\input{../template/source/packages}
+\input{../template/source/commands}
+\input{../template/source/styles}
+
+\begin{document}
+%RIDEFINIZIONE COMANDI
+\renewcommand{\documentName}{\docNameSdC}
+\renewcommand{\documentVersion}{\docVersionSdC}
+
+\renewcommand{\documentApprovers}{Stefano Meneguzzo}
+\renewcommand{\documentEditors}{Nicola Lazzarin, Pietro Lauriola\\&Marco Rosin, Marco Brugin\\&Stefano Meneguzzo}
+\renewcommand{\documentVerifiers}{Luca Marcato, Marco Rosin}
+
+\renewcommand{\documentUsage}{Interno}
+\renewcommand{\documentAddressee}{\commitNameM\\&\commitNameS}
+\renewcommand{\documentSummary}{Il presente documento espone le valutazioni preventive su requisiti e complessità dei capitolati d'appalto visionati. Queste hanno portato a scegliere una delle sette proposte di progetto disponibili.}
+
+%PRIMA PAGINA
+\pagenumbering{gobble}
+\pagestyle{empty}
+\input{../template/source/firstpage}
+\pagebreak
+
+%CHANGELOG E INDICI
+\input{contenuto/changelog} \pagebreak
+\tableofcontents \pagebreak
+
+%CONTENUTO
+\pagestyle{styleDocPages}
+\input{contenuto/contenuto}
+
+\end{document}
