@@ -26,6 +26,7 @@ jobs:
         with:
           commit_message: documenti compilati automaticamente
           branch: out_docs
+          status_options: '--untracked-files=all'
           file_pattern: './.*.pdf'
        
        
