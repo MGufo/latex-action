@@ -19,16 +19,20 @@ jobs:
             for d_path in ./**/d_*.tex; do (
               cd "$(dirname $d_path)"
               latexmk -pdflatex $(basename $d_path)
-            ) done'
+            )
             
-      - uses: actions/checkout@v3
-      - run: |
-          git add "./**/d_*.pdf"
-          git commit -m "pdf autogenerati"
-          git push       
-       
-      #- name: upload pdf compilato 
-      #- uses: actions/upload-artifact@v3
-      #  with:
-      #    name: docs_compilati
-      #    path: "/**/*.pdf"
+            for d_path in ./**/glossario.tex; do (
+              cd "$(dirname $d_path)"
+              latexmk -pdflatex $(basename $d_path)
+              makeglossaries $(basename $d_path)
+              latexmk -pdflatex $(basename $d_path)
+              latexmk -pdflatex $(basename $d_path)
+            )
+            
+            done'
+            
+      - name: upload pdf compilato 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: docs_compilati
+          path: "/**/*.pdf"
