@@ -25,7 +25,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: documenti compilati automaticamente
-          repository: $GITHUB_WORKSPACE
+          repository: ${{GITHUB_WORKSPACE}}
           branch: out_docs
           status_options: --untracked-files=all
           file_pattern: ./.*.pdf
