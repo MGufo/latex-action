@@ -16,7 +16,7 @@ jobs:
           docker run -i --rm -v "$(pwd)/:/work" -w /work ghcr.io/xu-cheng/texlive-full bash -c '
             shopt -s globstar
             set -e
-            for d_path in ./**/*.tex; do (
+            for d_path in ./**/d_*.tex; do (
               cd "$(dirname $d_path)"
               latexmk -pdflatex $(basename $d_path)
             ) done'
