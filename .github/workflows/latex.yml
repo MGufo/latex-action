@@ -19,13 +19,6 @@ jobs:
             for d_path in ./**/d_*.tex; do (
               cd "$(dirname $d_path)"
               latexmk -pdflatex $(basename $d_path)
-            )
-            for d_path in ./**/glossario.tex; do (
-              cd "$(dirname $d_path)"
-              latexmk -pdflatex $(basename $d_path)
-              makeglossaries $(basename $d_path)
-              latexmk -pdflatex $(basename $d_path)
-              latexmk -pdflatex $(basename $d_path)
             ) done'
             
       - name: upload pdf compilato 
