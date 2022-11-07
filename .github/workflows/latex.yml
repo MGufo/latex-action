@@ -23,7 +23,7 @@ jobs:
         
       - name: manual commit
         run: |
-          git add *.pdf
+          git add ./*.pdf
           git commit -m "pdf compilati da workflow"
           git push origin out_docs
       
