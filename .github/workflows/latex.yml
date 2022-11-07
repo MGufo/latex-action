@@ -26,7 +26,7 @@ jobs:
         with:
           commit_message: documenti compilati automaticamente
           branch: out_docs
-          file_pattern: './**/*.pdf'
+          file_pattern: './.*.pdf'
        
        
       # upload pdf compilato 
