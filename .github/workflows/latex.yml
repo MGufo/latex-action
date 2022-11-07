@@ -20,24 +20,16 @@ jobs:
               cd "$(dirname $d_path)"
               latexmk -pdflatex $(basename $d_path)
             ) done'
-        
-      - name: manual commit
-        run: |
-          git add ./*.pdf
-          git commit -m "pdf compilati da workflow"
-          git push origin out_docs
-      
-      #- name: commit to branch
-      #  uses: stefanzweifel/git-auto-commit-action@v4
-      #  with:
-      #    commit_message: documenti compilati automaticamente
-      #    repository: ${{GITHUB_WORKSPACE}}
-      #    branch: out_docs
-      #    status_options: --untracked-files=all
-      #    file_pattern: ./.*.pdf
+            
+      - uses: actions/checkout@v3
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "pdf autogenerati"
+          git push       
        
-       
-      # upload pdf compilato 
+      #- name: upload pdf compilato 
       #- uses: actions/upload-artifact@v3
       #  with:
       #    name: lettera_candidatura
