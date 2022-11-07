@@ -18,7 +18,7 @@ jobs:
             set -e
             for d_path in ./**/*.tex; do (
                 cd "$(dirname $d_path)"
-                latexmk $(basename $d_path)
+                latexmk -pdflatex $(basename $d_path)
             ) done'
             
       #if($d_path != "glossario" && $d_path != "template")
