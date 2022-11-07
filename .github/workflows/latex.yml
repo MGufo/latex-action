@@ -6,16 +6,29 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
+
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
+        run: |
+          docker run -i --rm -v "$(pwd)/:/work" -w /work ghcr.io/xu-cheng/texlive-full bash -c '
+            shopt -s globstar
+            set -e
+            for d_path in ./**/*.tex; do (
+              if("$(dirname $d_path)" != "glossario")
+              then
+                cd "$(dirname $d_path)"
+                latexmk $(basename $d_path)
+              fi
+            ) done'
+      
+      - name: commit to branch
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          root_file: lettera_candidatura.tex
-          working_directory: "./src/lettera_candidatura/"
-          work_in_root_file_dir: true
-          post_compile: "latexmk -c"
-        
+          commit_message: documenti compilati automaticamente
+          branch: out_docs
+       
+       
       # upload pdf compilato 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: lettera_candidatura
-          path: "./src/lettera_candidatura/*.pdf"
+      #- uses: actions/upload-artifact@v3
+      #  with:
+      #    name: lettera_candidatura
+      #    path: "./src/lettera_candidatura/*.pdf"
