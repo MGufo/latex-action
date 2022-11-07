@@ -13,7 +13,7 @@ jobs:
             shopt -s globstar
             set -e
             for d_path in ./**/*.tex; do (
-              if("$(dirname $d_path)" != "glossario")
+              if($d_path != "glossario")
               then
                 cd "$(dirname $d_path)"
                 latexmk $(basename $d_path)
