@@ -17,13 +17,9 @@ jobs:
             shopt -s globstar
             set -e
             for d_path in ./**/*.tex; do (
-                cd "$(dirname $d_path)"
-                latexmk -pdflatex $(basename $d_path)
+              cd "$(dirname $d_path)"
+              latexmk -pdflatex $(basename $d_path)
             ) done'
-            
-      #if($d_path != "glossario" && $d_path != "template")
-      #then
-      #fi
       
       - name: commit to branch
         uses: stefanzweifel/git-auto-commit-action@v4
