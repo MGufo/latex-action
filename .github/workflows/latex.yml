@@ -25,8 +25,9 @@ jobs:
           mkdir out_docs
           mv **/d_*.pdf out_docs
 
-          for file in out_docs do
-            echo "${file##*/}"
+          for file in out_docs
+          do
+            echo "$file"
           done
 
           git config --global user.name github-actions
