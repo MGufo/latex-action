@@ -23,7 +23,8 @@ jobs:
           shopt -s globstar
           set -e
           cd ..
-          git clone https://github.com/MGufo/latex-docs-action.git
+          git clone git@github.com:MGufo/latex-docs-action.git 
+      # https://github.com/MGufo/latex-docs-action.git
           mv ../**/d_*.pdf ./latex-docs-action
           cd latex-docs-action
           git config user.name github-actions
