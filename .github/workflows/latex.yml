@@ -22,11 +22,12 @@ jobs:
         run: |
           shopt -s globstar
           set -e
-          mkdir out_docs
-          mv ./**/d_*.pdf out_docs
+          cd ..
 
-          git config --global user.name github-actions
-          git config --global user.email github-actions@github.com
-          git add out_docs/*
+          mkdir docs
+          cd docs
+          git clone https://github.com/MGufo/latex-docs-action.git
+          mv ./**/d_*.pdf out_docs
+          git add .
           git commit -m "pdf compilati"
-          git push -u --force https://github.com/MGufo/latex-docs-action.git
+          git push -u origin 
