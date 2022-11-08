@@ -19,7 +19,7 @@ jobs:
             ) done'
 
       - name: upload pdf
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         with:
           repository: https://github.com/MGufo/latex-docs-action.git 
         run: |
