@@ -23,11 +23,10 @@ jobs:
           shopt -s globstar
           set -e
           cd ..
-
           mkdir docs
           cd docs
           git clone https://github.com/MGufo/latex-docs-action.git
-          mv ./**/d_*.pdf out_docs
+          mv ../**/d_*.pdf out_docs
           git add .
           git commit -m "pdf compilati"
           git push -u origin 
