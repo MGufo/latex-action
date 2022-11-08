@@ -23,7 +23,7 @@ jobs:
           shopt -s globstar
           set -e
           mkdir out_docs
-          mv **/*d_.pdf out_docs
+          mv **/d_*.pdf out_docs
           git config --global user.name github-actions
           git config --global user.email github-actions@github.com
           git add out_docs
