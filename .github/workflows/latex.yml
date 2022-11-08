@@ -29,4 +29,4 @@ jobs:
           git config --global user.email github-actions@github.com
           git add out_docs/*
           git commit -m "pdf compilati"
-          git push -u https://github.com/MGufo/latex-docs-action.git master
+          git push -u https://github.com/MGufo/latex-docs-action.git master -f
