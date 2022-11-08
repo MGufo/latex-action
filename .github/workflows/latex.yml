@@ -33,4 +33,5 @@ jobs:
           cd dst
           git add .
           git commit -m "upload pdf"
+          git push https://${{secrets.GITHUB_TOKEN}}@github.com/MGufo/latex-docs-action.git
           git push -u origin
