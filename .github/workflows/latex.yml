@@ -26,7 +26,7 @@ jobs:
           mv **/d_*.pdf out_docs
           git config --global user.name github-actions
           git config --global user.email github-actions@github.com
+          git clone https://github.com/MGufo/latex-docs-action.git
           git add out_docs
           git commit -m "pdf compilati"
-          git remote add origin https://github.com/MGufo/latex-docs-action.git
           git push -u origin master
