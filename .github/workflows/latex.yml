@@ -26,6 +26,8 @@ jobs:
           git clone https://github.com/MGufo/latex-docs-action.git
           mv ../**/d_*.pdf ./latex-docs-action
           cd latex-docs-action
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
           git commit -m "pdf compilati"
           git push -u origin 
