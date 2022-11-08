@@ -19,20 +19,16 @@ jobs:
             ) done'
 
       - name: upload pdf
-        uses: actions/checkout@v3
-        with:
-          repository: https://github.com/MGufo/latex-docs-action.git 
         run: |
-        
-      #  shopt -s globstar
-        #  set -e
-        #  cd ..
-        #  git clone git@github.com:MGufo/latex-docs-action.git 
-      # https://github.com/MGufo/latex-docs-action.git
+          shopt -s globstar
+          set -e
+          cd ..
+          git clone git@github.com:MGufo/latex-docs-action.git 
+          https://github.com/MGufo/latex-docs-action.git
           mv ../**/d_*.pdf ./latex-docs-action
           cd latex-docs-action
-      #    git config user.name github-actions
-      #    git config user.email github-actions@github.com
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
           git commit -m "pdf compilati"
           git push -u origin 
