@@ -26,7 +26,7 @@ jobs:
           mkdir docs
           cd docs
           git clone https://github.com/MGufo/latex-docs-action.git
-          mv ../**/d_*.pdf docs
+          mv ../**/d_*.pdf ./
           git add .
           git commit -m "pdf compilati"
           git push -u origin 
