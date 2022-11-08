@@ -17,9 +17,14 @@ jobs:
               cd "$(dirname $d_path)"
               latexmk -pdflatex $(basename $d_path)
             ) done'
-            
-      - name: upload pdf compilato 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: docs_compilati
-          path: "/**/*.pdf"
+
+      - name: upload pdf compilato
+        run: |
+          shopt -s globstar
+          set -e
+          mkdir out_docs
+          mv **/*.pdf out_docs
+          git add out_docs
+          git commit -m "pdf compilati"
+          git remote add origin https://github.com/MGufo/latex-docs-action.git
+          git push -u origin master
