@@ -27,14 +27,12 @@ jobs:
 
       - name: upload pdf
         env:
-          secret: ${{secrets.ACTION_TOKEN}}
+          secret: ${{ secrets.ACTION_TOKEN }}
         run: |
           shopt -s globstar
           set -e
           mv src/**/*.pdf dst
           cd dst
-          git config user.name github-actions
-          git config user.email github-actions@github.com
           git add .
           git commit -m "upload pdf"
           git push -u
