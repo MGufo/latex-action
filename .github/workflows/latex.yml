@@ -26,6 +26,8 @@ jobs:
             ) done'
 
       - name: upload pdf
+        env:
+          secret: ${{secrets.ACTION_TOKEN}}
         run: |
           shopt -s globstar
           set -e
