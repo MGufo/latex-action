@@ -32,6 +32,7 @@ jobs:
           mv src/**/*.pdf dst
           cd dst
           git add .
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git commit -m "upload pdf"
-          git push https://${{secrets.GITHUB_TOKEN}}@github.com/MGufo/latex-docs-action.git
           git push -u origin
