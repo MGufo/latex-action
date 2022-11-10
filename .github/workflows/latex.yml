@@ -38,6 +38,7 @@ jobs:
           set -e
           mv src/**/*.pdf dst
           cd dst
+          for f in d_*; do mv "$f" $(echo "$f" | sed 's/^d_//g'); done
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
