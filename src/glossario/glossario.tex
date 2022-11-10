@@ -1,0 +1,61 @@
+\input{../template/source/packages}
+\input{../template/source/commands}
+\input{../template/source/styles}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  PER COMPILARE IL GLOSSARIO ESEGUIRE IN ORDINE  %
+%    1: pdflatex glossario                        %
+%    2: makeglossaries glossario                  %
+%    1: pdflatex glossario                        %
+%    1: pdflatex glossario                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossarystyle{myaltlistgroup}{%
+    \setglossarystyle{altlistgroup}%
+    \renewcommand{\glsgroupheading}[1]{%
+        \pagebreak%
+        \item\makebox[\linewidth]{\Large\textbf{\glsgetgrouptitle{##1}}}%
+        \vspace*{-\baselineskip}%
+        \item\makebox[\linewidth]{\hspace*{3cm}\hrulefill\hspace*{3cm}}%
+        \phantomsection%
+        \addcontentsline{toc}{subsection}{##1}%
+    }%
+}
+
+\setglossarystyle{myaltlistgroup}
+
+\makeglossaries
+
+\begin{document}
+
+%RIDEFINIZIONE COMANDI
+\renewcommand{\documentName}{\docNameGlo}
+\renewcommand{\documentVersion}{\docVersionGlo}
+
+\renewcommand{\documentApprovers}{}
+\renewcommand{\documentEditors}{Nicola Lazzarin, Pietro Lauriola\\&Marco Rosin, Marco Brugin\\&Stefano Meneguzzo}
+\renewcommand{\documentVerifiers}{}
+
+\renewcommand{\documentUsage}{Esterno}
+\renewcommand{\documentAddressee}{\commitNameM\\&\commitNameS}
+\renewcommand{\documentSummary}{Il presente documento fornisce descrizioni dettagliate ai termini tecnici e/o ambigui presenti nella documentazione.}
+\renewcommand*{\glossaryname}{}%
+
+%PRIMA PAGINA
+\pagenumbering{gobble}
+\pagestyle{empty}
+\input{../template/source/firstpage}
+\pagebreak
+
+%CHANGELOG E INDICI
+\input{contenuto/changelog} \pagebreak
+\tableofcontents
+
+%CONTENUTO
+\pagestyle{styleDocPages}
+\input{contenuto/contenuto}
+
+\glsaddall
+\printglossary[nonumberlist]
+
+\end{document}

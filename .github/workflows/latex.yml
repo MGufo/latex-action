@@ -14,7 +14,7 @@ jobs:
         with:
           path: dst
           repository: MGufo/latex-docs-action
-          token: ${{ secrets.ACTION }}
+          token: ${{ secrets.ACTION_TOKEN }}
 
       - name: Compile LaTeX document
         run: |
@@ -24,8 +24,13 @@ jobs:
             for d_path in ./**/d_*.tex; do (
               cd "$(dirname $d_path)"
               latexmk -pdflatex $(basename $d_path)
-            ) done'
-
+            ) done
+            cd src/glossario
+            pdflatex glossario                        
+            makeglossaries glossario                  
+            pdflatex glossario                       
+            pdflatex glossario
+            '
 
       - name: upload pdf
         run: |
